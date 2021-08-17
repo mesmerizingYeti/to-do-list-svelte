@@ -1,20 +1,22 @@
 <script>
+	import TitleBar from "./components/TitleBar.svelte";
 	import ToDoItem from "./components/ToDoItem.svelte";
-	export let name;
+
+	let todolist = [];
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<TitleBar backgroundColor="#ff3e00" color="white" />
 	<ToDoItem title="HELLO" />
 </main>
 
 <style>
 	main {
 		text-align: center;
-		padding: 1em;
+		/* padding: 1em; */
 		max-width: 240px;
 		margin: 0 auto;
+		margin: 0;
 	}
 
 	h1 {
