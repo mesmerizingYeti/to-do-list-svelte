@@ -45,6 +45,9 @@
     -webkit-touch-callout: none;
     font-size: 1.5em;
   }
+  p {
+    margin: 0 0 0 2em;
+  }
   button {
     margin: 0;
     padding: 0.5em;
