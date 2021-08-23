@@ -1,5 +1,6 @@
 <script>
   export let title = "";
+  export let description = "";
   let finished = false;
 
   const handleChange = e => finished = e.target.checked;
@@ -19,6 +20,9 @@
     >
       {title}
     </label>
+    <p>
+      {description}
+    </p>
   </div>
   <button class="del-btn" on:click={handleBtnClick}>
     <span class="icon-container">
@@ -39,6 +43,7 @@
     -khtml-user-select: none;
     -webkit-user-select: none;
     -webkit-touch-callout: none;
+    font-size: 1.5em;
   }
   button {
     margin: 0;
@@ -55,14 +60,14 @@
   }
   .finished {
     color: white;
-    background-color: #b2beb5 ;
+    background-color: #676778 ;
     text-decoration: line-through;
   }
   .container {
     margin: 1em;
     padding: 0.75em;
     border: 1px solid black;
-    border-radius: 0.5em;
+    border-radius: 0.25em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -73,6 +78,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    align-content: center;
   }
   .icon-container {
     color: #cb4154;

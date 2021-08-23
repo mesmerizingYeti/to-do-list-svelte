@@ -34,4 +34,13 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  @media (max-width: 400px) {
+    h1 {
+      font-size: large;
+    }
+    .container {
+      padding: 0.25em 0.75em;
+    }
+  }
 </style>
