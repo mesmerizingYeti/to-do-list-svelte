@@ -1,5 +1,9 @@
 <script>
   export let isOpen = false;
+
+  const handleCancel = e => {
+    isOpen = false;
+  };
 </script>
 
 <!-- Mask -->
@@ -7,17 +11,20 @@
 <!-- Modal -->
 <div class={isOpen ? "modal" : "modal hidden"}>
   <form>
-    <input type="text" name="title" />
-    <label for="title">Title</label>
-    <textarea name="description" id="description" />
-    <button class="addBtn">Add Task</button>
-    <button class="cancelBtn">Cancel</button>
+    <div class="column">
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title" />
+      <textarea name="description" id="description" />
+      <button class="addBtn">Add Task</button>
+      <button class="cancelBtn" on:click={handleCancel}>Cancel</button>
+    </div>
   </form>
 </div>
 
 <style>
   .modal {
     background-color: blueviolet;
+    position: absolute;
   }
   .hidden {
     display: none;

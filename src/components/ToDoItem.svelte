@@ -18,7 +18,7 @@
       for="to-do-checkbox"
       class={finished ? "cross-out" : ""}
     >
-      {title}
+      <span>{title}</span>
     </label>
     <p>
       {description}

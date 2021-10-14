@@ -1,18 +1,23 @@
 <script>
+	import FormModal from "./components/FormModal.svelte";
 	import TitleBar from "./components/TitleBar.svelte";
 	import ToDoItem from "./components/ToDoItem.svelte";
 	import AddButton from "./components/AddButton.svelte";
 
 	let toDoList = [{title: "First Task", description: "This is the first task"}];
 
+	let modalIsOpen = false;
+
 	const addTask = e => {
 		console.log("Adding task")
 		console.log(e);
+		modalIsOpen = true;
 	}
 </script>
 
 <main>
-	<TitleBar backgroundColor="#ff3e00" color="white" />
+	<FormModal isOpen={modalIsOpen} />
+	<TitleBar backgroundColor="#A54627" color="white" />
 	{#each toDoList as toDoItem}
 		<ToDoItem {...toDoItem} />
 	{/each}
